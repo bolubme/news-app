@@ -1,0 +1,40 @@
+{
+    "name": "My News PWA",
+    "short_name": "News Room",
+    "description": "My Ai news room",
+    "icons": [
+      {
+        "src": "images/bigLogo.png",
+        "sizes": "500x500",
+        "type": "image/png"
+      },
+      {
+        "src": "images/smallLogo.png",
+        "sizes": "193x193",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#fab300",
+    "orientation": "portrait",
+    "screenshots": [
+      {
+       "src": "images/bigLogo.png",
+       "sizes": "500x500",
+       "type": "image/png",
+       "form_factor": "narrow",
+       "label": "News Room"
+      },
+      {
+        "src": "images/bigLogo.png",
+        "sizes": "500x500",
+        "type": "image/png",
+        "form_factor": "wide",
+        "label": "News Room"
+       }
+  ],
+  "id": "/index.html"
+}
+
+  
