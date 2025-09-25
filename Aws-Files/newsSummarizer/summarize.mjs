@@ -1,7 +1,7 @@
-import OpenAI from 'openai';
+import OpenAI from "openai";
 
 // Initialize the OpenAI client
-const client = new OpenAI({ apiKey: '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' });
+const client = new OpenAI({ apiKey: "" });
 
 // Function to summarize an article with longer output
 export async function summarizeArticle(article) {
