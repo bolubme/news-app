@@ -2,6 +2,17 @@
 
 A modern, feature-rich news aggregation platform built with Vue.js and AWS serverless architecture. This application provides real-time news updates from multiple sources, chat functionality, and advanced features like text-to-speech and news summarization.
 
+## Project Aim
+
+The aim of this project is to make it easy for everyone to stay update with the latest news,
+without feeling overwhelmed by lots of information’s. The project also aims to explore the use
+of Artificial intelligence in news aggregation and how it can further help users stay informed.
+The project will be focused on building a web application that helps individuals to easily
+access news articles. The application will also support some amazing functionality like
+summarization of article, text to spoken words and a chat room for communication between
+multiple users. The web application can be accessed on the web browser and as a web
+application and android based application with the help of PWA (Progressive web apps)
+
 ## Application Preview
 
 ![News Room Homepage](./public/images/bigLogo.png)
@@ -18,20 +29,24 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
 ### Application Screenshots
 
 #### Homepage and Navigation
-![Navigation and Weather](docs/screenshots/nav-weather.png)
-*Navigation bar with weather integration and category selection*
+
+![Navigation and Weather](docs/images/nav-weather.png)
+_Navigation bar with weather integration and category selection_
 
 #### News Article View
-![Article View](docs/screenshots/article-view.png)
-*Detailed article view with summarization and text-to-speech options*
+
+![Article View](docs/images/article-view.png)
+_Detailed article view with summarization and text-to-speech options_
 
 #### Latest News Section
-![Latest News](docs/screenshots/latest-news.png)
-*Dynamic latest news feed with multi-source integration*
+
+![Latest News](docs/images/latest-news.png)
+_Dynamic latest news feed with multi-source integration_
 
 ## Features
 
 - **Multi-Source News Aggregation**
+
   - BBC News
   - The Guardian
   - The Independent
@@ -39,12 +54,14 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
   - Categorized news sections (Business, Entertainment, Politics, Sports, World, Lifestyle)
 
 - **Real-Time Chat System**
+
   - Group chat functionality
   - WebSocket-based communication
   - Real-time message updates
   - Chat room management
 
 - **Advanced Features**
+
   - News article summarization
   - Text-to-speech functionality
   - Offline support with Service Workers
@@ -60,6 +77,7 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
 ## Tech Stack
 
 ### Frontend
+
 - Vue.js 3
 - Vuex for state management
 - Vue Router for navigation
@@ -67,6 +85,7 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
 - Progressive Web App (PWA) support
 
 ### Backend (AWS Serverless)
+
 - AWS Lambda Functions
 - WebSocket API for real-time chat
 - DynamoDB for data storage
@@ -101,11 +120,13 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
 ## Getting Started
 
 1. **Prerequisites**
+
    - Node.js (v14 or higher)
    - npm or yarn
    - AWS account (for backend deployment)
 
 2. **Installation**
+
    ```bash
    # Clone the repository
    git clone [repository-url]
@@ -121,6 +142,7 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
    ```
 
 3. **Build for Production**
+
    ```bash
    npm run build
    ```
@@ -137,6 +159,7 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
 The News Room application follows a modern serverless architecture leveraging AWS services for backend operations and Vue.js for the frontend interface.
 
 #### Frontend Architecture
+
 ```
 Vue.js Frontend
 ├── Components
@@ -149,6 +172,7 @@ Vue.js Frontend
 ```
 
 #### Backend Architecture (AWS Serverless)
+
 ```
 AWS Services
 ├── Lambda Functions
@@ -177,11 +201,13 @@ The application requires several AWS services to be configured:
 #### Service Configuration Details
 
 1. **News Scraping Service**
+
    - Language: Python
    - Sources: BBC, Guardian, Independent, TalkSport
    - Scheduling: CloudWatch Events trigger
 
 2. **Chat Service**
+
    - WebSocket API Gateway integration
    - DynamoDB for message persistence
    - Lambda functions for connection management
