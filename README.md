@@ -2,6 +2,33 @@
 
 A modern, feature-rich news aggregation platform built with Vue.js and AWS serverless architecture. This application provides real-time news updates from multiple sources, chat functionality, and advanced features like text-to-speech and news summarization.
 
+## Application Preview
+
+![News Room Homepage](./public/images/bigLogo.png)
+
+### Key Interface Features
+
+- **Dynamic Weather Display**: Real-time weather information (Temperature and conditions)
+- **Category Navigation**: Easy access to World, Sports, Business, Politics, Entertainment, and Lifestyle sections
+- **News Cards**: Clean, responsive layout showing news from multiple sources
+- **Article Summaries**: AI-powered article summarization for quick reading
+- **Chat Integration**: Real-time discussion capabilities
+- **Multi-source Integration**: News from BBC, Guardian, Independent, and TalkSport
+
+### Application Screenshots
+
+#### Homepage and Navigation
+![Navigation and Weather](docs/screenshots/nav-weather.png)
+*Navigation bar with weather integration and category selection*
+
+#### News Article View
+![Article View](docs/screenshots/article-view.png)
+*Detailed article view with summarization and text-to-speech options*
+
+#### Latest News Section
+![Latest News](docs/screenshots/latest-news.png)
+*Dynamic latest news feed with multi-source integration*
+
 ## Features
 
 - **Multi-Source News Aggregation**
@@ -103,7 +130,42 @@ A modern, feature-rich news aggregation platform built with Vue.js and AWS serve
    npm run test:unit
    ```
 
-## AWS Backend Setup
+## Technical Documentation
+
+### Architecture Overview
+
+The News Room application follows a modern serverless architecture leveraging AWS services for backend operations and Vue.js for the frontend interface.
+
+#### Frontend Architecture
+```
+Vue.js Frontend
+├── Components
+│   ├── Navigation (NavBar, MenuTop)
+│   ├── News Display (ArticleView, NewsCard)
+│   ├── Chat Interface
+│   └── Weather Widget
+├── State Management (Vuex)
+└── Router (Vue Router)
+```
+
+#### Backend Architecture (AWS Serverless)
+```
+AWS Services
+├── Lambda Functions
+│   ├── News Scraping (Python)
+│   ├── Article Summarization
+│   ├── Text-to-Speech
+│   └── WebSocket Handlers
+├── API Gateway
+│   ├── REST API
+│   └── WebSocket API
+└── DynamoDB Tables
+    ├── News Articles
+    ├── User Data
+    └── Chat Messages
+```
+
+### AWS Backend Setup
 
 The application requires several AWS services to be configured:
 
@@ -111,6 +173,23 @@ The application requires several AWS services to be configured:
 2. Configure WebSocket API Gateway
 3. Set up DynamoDB tables for chat and user data
 4. Configure necessary IAM roles and permissions
+
+#### Service Configuration Details
+
+1. **News Scraping Service**
+   - Language: Python
+   - Sources: BBC, Guardian, Independent, TalkSport
+   - Scheduling: CloudWatch Events trigger
+
+2. **Chat Service**
+   - WebSocket API Gateway integration
+   - DynamoDB for message persistence
+   - Lambda functions for connection management
+
+3. **Article Processing**
+   - Summarization service
+   - Text-to-speech conversion
+   - Content categorization
 
 Detailed AWS setup instructions can be found in the respective service directories.
 
@@ -125,25 +204,6 @@ Detailed AWS setup instructions can be found in the respective service directori
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Documentation
-
-For detailed information about the project, please refer to the following documentation:
-
-- [Technical Documentation](./docs/TECHNICAL.md) - Detailed technical specifications and architecture
-- [Project Report](./docs/PROJECT_REPORT.md) - Comprehensive project overview and implementation details
-- [User Guide](./docs/USER_GUIDE.md) - End-user documentation with screenshots
-
-## Screenshots
-
-### Homepage
-![Homepage](./docs/images/homepage.png)
-
-### News Categories
-![Categories](./docs/images/navigation.png)
-
-### Article View
-![Article](./docs/images/article-view.png)
 
 ## Acknowledgments
 
